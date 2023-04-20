@@ -1,12 +1,9 @@
 from flask import Flask, request, render_template, redirect, flash
 from model import employee_directory
-import jinja2
 
 app = Flask(__name__)
 app.secret_key = '\xf5!\x07!qj\xa4\x08\xc6\xf8\n\x8a\x95m\xe2\x04g\xbb\x98|U\xa2f\x03'
 
-app.jinja_env.undefined = jinja2.StrictUndefined
-app.config['PRESERVE_CONTEXT_ON_EXCEPTION'] = True
 
 @app.route("/")
 def home():
